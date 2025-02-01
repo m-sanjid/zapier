@@ -43,8 +43,9 @@ router.post("/", authMiddleware, async (req, res) => {
     });
   });
 });
-router.get("/", authMiddleware, (req, res) => {
-  console.log("createZap");
+router.get("/", authMiddleware, async (req, res) => {
+  //@ts-ignore
+  const id = req.id;
 });
 
 router.get("/:zapId", authMiddleware, (req, res) => {
